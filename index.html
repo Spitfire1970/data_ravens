@@ -13,22 +13,24 @@
                     colors: {
                         'accent': '#d2a122',
                         'accent-dark': '#b88e1e',
-                        'accent-light': '#d1ac4b'
+                        'accent-light': '#d1ac4b',
+                        'accent-bg': '#faeed4',
+                        'accent-bot': '#f0deaa'
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="h-full flex flex-col">
-    <div id="chat-container" class="flex flex-col h-full max-w-2xl mx-auto w-full border-2 border-t-0">
+<body class="h-full flex flex-col bg-accent-bg">
+    <div id="chat-container" class="flex flex-col h-full max-w-2xl mx-auto w-full border-2 border-t-0 bg-white">
         <header class="bg-accent-light border-b border-gray-200 p-4 shadow-sm sticky top-0 z-10">
             <h1 class="text-xl font-bold text-gray-800 text-center">Movie Finder Chatbot</h1>
         </header>
 
         <div id="chat-messages" class="flex-1 p-4 space-y-4 overflow-y-auto">
             <div class="chat-message bot">
-                <div class="bg-white rounded-lg p-3 max-w-[85%] sm:max-w-[80%] shadow-sm">
+                <div class="bg-accent-bot rounded-lg p-3 max-w-[85%] sm:max-w-[80%] shadow-sm">
                     <p class="text-gray-800">Hello! I am a chatbot that helps you find movies. Just tell me what genre you're interested in (e.g. Comedy, Science Fiction, Thriller).</p>
                 </div>
             </div>

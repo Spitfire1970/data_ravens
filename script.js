@@ -48,7 +48,7 @@ function append_message(message, sender) {
 
     const message_div = document.createElement('div');
     // accent color for user messages
-    message_div.className = `p-3 rounded-lg max-w-[85%] sm:max-w-[80%] shadow-sm ${sender === 'user' ? 'bg-accent text-white' : 'bg-white text-gray-800'}`;
+    message_div.className = `p-3 rounded-lg max-w-[85%] sm:max-w-[80%] shadow-sm ${sender === 'user' ? 'bg-accent text-white' : 'bg-accent-bot text-gray-800'}`;
 
     message_div.innerHTML = `<p class="whitespace-pre-wrap">${message}</p>`;
 
