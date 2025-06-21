@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Finder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // to enable data ravens colour scheme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent': '#d2a122',
+                        'accent-dark': '#b88e1e',
+                        'accent-light': '#d1ac4b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full flex flex-col">
+    <div id="chat-container" class="flex flex-col h-full max-w-2xl mx-auto w-full border-2 border-t-0">
+        <header class="bg-accent-light border-b border-gray-200 p-4 shadow-sm sticky top-0 z-10">
+            <h1 class="text-xl font-bold text-gray-800 text-center">Movie Finder Chatbot</h1>
+        </header>
+
+        <div id="chat-messages" class="flex-1 p-4 space-y-4 overflow-y-auto">
+            <div class="chat-message bot">
+                <div class="bg-white rounded-lg p-3 max-w-[85%] sm:max-w-[80%] shadow-sm">
+                    <p class="text-gray-800">Hello! I am a chatbot that helps you find movies. Just tell me what genre you're interested in (e.g. Comedy, Science Fiction, Thriller).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white border-t border-gray-200 sticky bottom-0">
+            <div class="flex space-x-2">
+                <input
+                    type="text"
+                    id="user-input"
+                    class="flex-1 w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-accent"
+                    placeholder="Type a genre to get a movie recommendation..."
+                >
+                <button
+                    id="send-button"
+                    class="bg-accent text-white rounded-full px-5 py-2 hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:bg-accent-light"
+                >
+                    <!-- SVG taken from https://freesvgicons.com/packs/solar -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M4 11.25a.75.75 0 0 0 0 1.5v-1.5Zm0 1.5h16v-1.5H4v1.5Z" opacity=".5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m14 6l6 6l-6 6"/></g></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
